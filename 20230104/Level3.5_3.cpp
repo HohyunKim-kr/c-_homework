@@ -1,25 +1,29 @@
 #include <iostream>
-
+#define elements 4
 int main()
 {
-	int a[4] = { 1,2,3,4 };
-	int b[4];
+	int arr[elements] = {1,2,3,4};
+	int arr2[4];
+	int count = 0;
 
 	for (int i = 0; i < 4; i++)
 	{
-		std::cin >> b[i];
+		std::cin >> arr2[i];	
 	}
-	if (a == b)
+
+	for (int i = 0; i < elements; i++)
 	{
-		std::cout << "테스트성공";
-	}
-	for (int i = 0; i < 4; i++)
-	{
-		if (a == b)
+		if (*(arr+i) == *(arr2+i))
 		{
-			std::cout << "테스트성공";
+			count++;
+			if(count == elements)
+			{
+				std::cout << "로그인성공";
+			}
 		}
 	}
+	
+
 
 	
 	return 0;
