@@ -1,0 +1,25 @@
+#include<iostream>
+int index = 0;
+
+int arr[8] = { 3,7,4,1,9,4,6,2 };
+
+void Output(int a);
+
+int main()
+{
+	std::cin >> index;
+
+	Output(index);
+
+	return 0;
+}
+
+void Output(int a)
+{
+	if (a > 0)
+	{
+		std::cout << arr[a] << " ";
+		Output(a-1);
+	}
+	std::cout << arr[a] << " ";
+}
